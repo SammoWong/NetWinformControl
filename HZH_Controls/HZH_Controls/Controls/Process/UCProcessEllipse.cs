@@ -224,7 +224,7 @@ namespace HZH_Controls.Controls
         /// <summary>
         /// The m font
         /// </summary>
-        private Font m_font = new Font("Arial Unicode MS", 20);
+      
         /// <summary>
         /// 获取或设置控件显示的文字的字体。
         /// </summary>
@@ -240,18 +240,14 @@ namespace HZH_Controls.Controls
         {
             get
             {
-                return m_font;
+                return base.Font;
             }
             set
             {
-                m_font = value;
+                base.Font = value;
                 Refresh();
             }
         }
-        /// <summary>
-        /// The m fore color
-        /// </summary>
-        Color m_foreColor = Color.White;
         /// <summary>
         /// 获取或设置控件的前景色。
         /// </summary>
@@ -259,16 +255,16 @@ namespace HZH_Controls.Controls
         /// <PermissionSet>
         ///   <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
         /// </PermissionSet>
-        [Description("文字颜色"), Category("自定义")]
+        [Description("文字颜色"), Category("自定义"), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible),Localizable(true)]
         public override Color ForeColor
         {
             get
             {
-                return m_foreColor;
+                return base.ForeColor;
             }
             set
             {
-                m_foreColor = value;
+                base.ForeColor = value;
                 Refresh();
             }
         }
@@ -305,6 +301,8 @@ namespace HZH_Controls.Controls
             this.SetStyle(ControlStyles.Selectable, true);
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.SetStyle(ControlStyles.UserPaint, true);
+            ForeColor = Color.White;
+            Font = new Font("Arial Unicode MS", 20); 
         }
 
         /// <summary>

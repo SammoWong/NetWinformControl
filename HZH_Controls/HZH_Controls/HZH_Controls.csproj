@@ -33,9 +33,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +46,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Charts\AuxiliaryLine.cs" />
+    <Compile Include="Controls\Charts\Axis.cs" />
+    <Compile Include="Controls\Charts\AxisCollection.cs" />
+    <Compile Include="Controls\Charts\AxisFormat.cs" />
+    <Compile Include="Controls\Charts\AxisLabel.cs" />
+    <Compile Include="Controls\Charts\AxisPosition.cs" />
+    <Compile Include="Controls\Charts\AxisType.cs" />
+    <Compile Include="Controls\Charts\BarChartItem.cs" />
+    <Compile Include="Controls\Charts\ChartPoint.cs" />
+    <Compile Include="Controls\Charts\ChartPointCollection.cs" />
+    <Compile Include="Controls\Charts\ChartPointEventArgs.cs" />
+    <Compile Include="Controls\Charts\ChartPointEventHandler.cs" />
+    <Compile Include="Controls\ScrollBar\ScrollbarComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\GraphDirection.cs" />
+    <Compile Include="Controls\Charts\UCBarChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Charts\UCChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Charts\SelectMode.cs" />
+    <Compile Include="Controls\Charts\SeriesBase.cs" />
+    <Compile Include="Controls\Charts\SeriesCollection.cs" />
+    <Compile Include="Controls\Charts\SeriesCollectionEditor.cs" />
+    <Compile Include="Controls\Charts\SeriesFormat.cs" />
+    <Compile Include="Controls\Charts\Series\BezierSeries.cs" />
+    <Compile Include="Controls\Charts\Series\ColumnSeries.cs" />
+    <Compile Include="Controls\Charts\Series\LabelSeries.cs" />
+    <Compile Include="Controls\Charts\Series\LineSeries.cs" />
+    <Compile Include="Controls\Charts\Series\PointSeries.cs" />
+    <Compile Include="Controls\Charts\Series\StandardLineSeries.cs" />
+    <Compile Include="Controls\Charts\ZoomType.cs" />
+    <Compile Include="Controls\FactoryControls\Arrow\UCArrow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FactoryControls\Blower\UCBlower.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\FactoryControls\Bottle\UCBottle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,7 +143,26 @@
     <Compile Include="Controls\FactoryControls\Conveyor\UCConveyor.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\FactoryControls\Lamp\UCAlarmLamp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FactoryControls\Lamp\UCSignalLamp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FactoryControls\MindMapping\MindMappingItemEntity.cs" />
+    <Compile Include="Controls\FactoryControls\MindMapping\UCMindMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FactoryControls\MindMapping\UCMindMappingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FactoryControls\MindMapping\UCMindMappingPanel.Designer.cs">
+      <DependentUpon>UCMindMappingPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FactoryControls\Pond\UCPond.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FactoryControls\Thermometer\UCThermometer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\FactoryControls\Valve\UCValve.cs">
@@ -219,6 +281,9 @@
     <Compile Include="Controls\Roll\UCRollText.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\ScrollBar\UCVScrollbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Step\UCStep.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +302,13 @@
     <Compile Include="Controls\TrackBar\UCTrackBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UIEditor\FrmSelectImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIEditor\FrmSelectImage.Designer.cs">
+      <DependentUpon>FrmSelectImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIEditor\ImagePropertyEditor.cs" />
     <Compile Include="Controls\Wave\UCWaveChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -317,7 +389,7 @@
     <Compile Include="Controls\KeyBord\UCKeyBorderPay.Designer.cs">
       <DependentUpon>UCKeyBorderPay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\List\TreeViewEx.cs">
+    <Compile Include="Controls\Treeview\TreeViewEx.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\List\UCHorizontalList.cs">
@@ -469,6 +541,8 @@
     </Compile>
     <Compile Include="Helpers\MouseHook.cs" />
     <Compile Include="Helpers\NativeMethods.cs" />
+    <Compile Include="IconFont\FontImages.cs" />
+    <Compile Include="IconFont\FontIcons.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -522,6 +596,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DateTime\UCTimePanel.resx">
       <DependentUpon>UCTimePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FactoryControls\MindMapping\UCMindMappingPanel.resx">
+      <DependentUpon>UCMindMappingPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\KeyBord\UCKeyBorderAll.resx">
       <DependentUpon>UCKeyBorderAll.cs</DependentUpon>
@@ -601,6 +678,9 @@
     <EmbeddedResource Include="Controls\RadioButton\UCRadioButton.resx">
       <DependentUpon>UCRadioButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScrollBar\UCVScrollbar.resx">
+      <DependentUpon>UCVScrollbar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Split\UCSplitLine_H.resx">
       <DependentUpon>UCSplitLine_H.cs</DependentUpon>
     </EmbeddedResource>
@@ -665,8 +745,37 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIEditor\FrmSelectImage.resx">
+      <DependentUpon>FrmSelectImage.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IconFont\ElegantIcons.ttf" />
+    <EmbeddedResource Include="HandInput\certificate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\certificate64">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\handinput.cupf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\handinput.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\lm_HW_PB_7000_kn.arpa.7e9.prune.1e-7.lm.fixed">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\sgim_annex.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\sgim_hz.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\sgim_py.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IconFont\FontAwesome.ttf" />
     <None Include="Resources\alarm.png" />
   </ItemGroup>
   <ItemGroup>
@@ -798,10 +907,51 @@
   <ItemGroup>
     <None Include="Resources\more1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HandInput\HandInput.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\handinput.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\HandInput64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\overlapEngine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandInput\singleEngine.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbMiddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbSpanBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbSpanTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downarrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>md "$(TargetDir)HandInput"
-copy /y "$(ProjectDir)HandInput\*.*" "$(TargetDir)HandInput"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

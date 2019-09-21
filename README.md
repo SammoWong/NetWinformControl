@@ -8,7 +8,7 @@
 
 #### Introduction
 
-c#winfrom custom control, `has better operation support for touch screen`, the project is based on framework4.0, completely native control development, `do not use any third-party controls`, you can use it safely in your project .
+c#winform custom control, `has better operation support for touch screen`, the project is based on framework4.0, completely native control development, `do not use any third-party controls`, you can use it safely in your project .
 
 Blog address: [https://www.cnblogs.com/bfyx](https://www.cnblogs.com/bfyx/p/11364884.html)
 
@@ -637,6 +637,36 @@ HZH_Controls.Forms.FrmAnchorTips.ShowTips(button1, "Test prompt information \nBO
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0906/165031_e365fd63_301547.gif "5.gif")
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0906/165040_4ad642d8_301547.gif "6.gif")
+
+##### 33、Blower
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0909/134327_6e99dd33_301547.png "fj.png")
+
+##### 34, signal light
+
+![Enter picture description](https://images.gitee.com/uploads/images/2019/0909/162334_5a8c6b42_301547.gif "1.gif")
+
+##### 35、Alarm Lamp
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0910/094631_ab30696f_301547.gif "2.gif")
+
+##### 36、Temperature
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0910/163155_5bee72e6_301547.png "wdj.png")
+
+##### 37、Mind Mapping
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0911/143628_cfaee8b4_301547.gif "1.gif")
+
+#### 38、icon
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0912/151717_4fe896c4_301547.png "1.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0912/151726_2b603d87_301547.png "2.png")
+
+
+#### 39、BarChart
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0917/152524_0d8024a8_301547.png "zzt.png")
 
 #### The last words
 

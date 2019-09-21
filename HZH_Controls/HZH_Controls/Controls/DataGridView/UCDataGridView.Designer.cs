@@ -48,12 +48,14 @@ namespace HZH_Controls.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panHead = new System.Windows.Forms.Panel();
             this.panColumns = new System.Windows.Forms.TableLayoutPanel();
             this.panHeadLeft = new System.Windows.Forms.Panel();
             this.ucSplitLine_H1 = new HZH_Controls.Controls.UCSplitLine_H();
             this.panRow = new System.Windows.Forms.Panel();
             this.panPage = new System.Windows.Forms.Panel();
+            this.scrollbarComponent1 = new HZH_Controls.Controls.ScrollBar.ScrollbarComponent(this.components);
             this.panHead.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,11 +103,13 @@ namespace HZH_Controls.Controls
             // 
             // panRow
             // 
+            this.panRow.AutoScroll = true;
             this.panRow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panRow.Location = new System.Drawing.Point(0, 40);
             this.panRow.Name = "panRow";
             this.panRow.Size = new System.Drawing.Size(1061, 481);
             this.panRow.TabIndex = 1;
+            this.scrollbarComponent1.SetUserCustomScrollbar(this.panRow, true);
             this.panRow.SizeChanged += new System.EventHandler(this.panRow_SizeChanged);
             // 
             // panPage
@@ -120,12 +124,14 @@ namespace HZH_Controls.Controls
             // UCDataGridView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panRow);
             this.Controls.Add(this.panPage);
             this.Controls.Add(this.panHead);
             this.Name = "UCDataGridView";
             this.Size = new System.Drawing.Size(1061, 565);
+            this.scrollbarComponent1.SetUserCustomScrollbar(this, true);
             this.Resize += new System.EventHandler(this.UCDataGridView_Resize);
             this.panHead.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -158,6 +164,7 @@ namespace HZH_Controls.Controls
         /// The pan head left
         /// </summary>
         private System.Windows.Forms.Panel panHeadLeft;
+        private ScrollBar.ScrollbarComponent scrollbarComponent1;
 
     }
 }

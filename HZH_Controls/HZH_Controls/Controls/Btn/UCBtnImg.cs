@@ -66,6 +66,33 @@ namespace HZH_Controls.Controls
                 this.lbl.Image = value;
             }
         }
+
+        /// <summary>
+        /// The image font icons
+        /// </summary>
+        private object imageFontIcons;
+        /// <summary>
+        /// Gets or sets the image font icons.
+        /// </summary>
+        /// <value>The image font icons.</value>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [Editor(typeof(ImagePropertyEditor), typeof(System.Drawing.Design.UITypeEditor))]
+        public object ImageFontIcons
+        {
+            get { return imageFontIcons; }
+            set
+            {
+                if (value == null || value is Image)
+                {
+                    imageFontIcons = value;
+                    if (value != null)
+                    {
+                        Image = (Image)value;
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// 图片位置
         /// </summary>
@@ -96,7 +123,7 @@ namespace HZH_Controls.Controls
             IsShowTips = false;
             base.BtnForeColor = ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             base.BtnFont = new System.Drawing.Font("微软雅黑", 17F);
-            base.BtnText = "    自定义按钮";
+            base.BtnText = "自定义按钮";
         }
     }
 }
